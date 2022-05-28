@@ -6,7 +6,6 @@ import base64
 # import io
 from io import BytesIO, StringIO
 import matplotlib.pyplot as plt
-import pandas as pd
 import numpy as np
 from array import array 
 from keras.models import Sequential
@@ -22,7 +21,7 @@ from keras.callbacks import EarlyStopping
 import yfinance as yf
 
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -168,4 +167,4 @@ def form():
 
 
 if __name__ == '__main__':
-    app.run
+    app.run(debug=True)
